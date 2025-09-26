@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0.0)
-project(OS_1st_LAB VERSION 0.1.0 LANGUAGES C CXX)
+project(OOP_LAB_1 VERSION 0.1.0 LANGUAGES C CXX)
 
 include(CTest)
 enable_testing()
@@ -14,5 +14,5 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_subdirectory(src)
+add_subdirectory(code)
 add_subdirectory(tests)

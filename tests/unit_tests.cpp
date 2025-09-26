@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <string>
-#include "../src/chek_number.h"
+#include "../code/chek_number.h"
 
 TEST(ChekNumberTest, AllDays) {
     EXPECT_TRUE(isSchizophrenia("Понедельник", 12));
