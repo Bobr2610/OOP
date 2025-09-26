@@ -2,45 +2,30 @@
 #include <string>
 #include "../src/chek_number.h"
 
-TEST(ChekNumberTest, Monday) {
+TEST(ChekNumberTest, AllDays) {
     EXPECT_TRUE(isSchizophrenia("Понедельник", 12));
-    EXPECT_FALSE(isSchizophrenia("Понедельник", 13));
-}
+    EXPECT_FALSE(isSchizophrenia("Понедельник", 413));
 
-TEST(ChekNumberTest, Tuesday) {
     EXPECT_TRUE(isSchizophrenia("Вторник", 96));
-    EXPECT_FALSE(isSchizophrenia("Вторник", 95));
-}
+    EXPECT_FALSE(isSchizophrenia("Вторник", 23));
 
-TEST(ChekNumberTest, Wednesday) {
     EXPECT_TRUE(isSchizophrenia("Среда", 34));
-    EXPECT_FALSE(isSchizophrenia("Среда", 33));
-}
+    EXPECT_FALSE(isSchizophrenia("Среда", 4));
 
-TEST(ChekNumberTest, Thursday) {
     EXPECT_TRUE(isSchizophrenia("Четверг", 0));
-    EXPECT_FALSE(isSchizophrenia("Четверг", 1));
-}
+    EXPECT_FALSE(isSchizophrenia("Четверг", 6));
 
-TEST(ChekNumberTest, Friday) {
     EXPECT_TRUE(isSchizophrenia("Пятница", 2));
     EXPECT_FALSE(isSchizophrenia("Пятница", 3));
-    EXPECT_TRUE(isSchizophrenia("Пятница", 4));
-    EXPECT_FALSE(isSchizophrenia("Пятница", 5));
-}
+    EXPECT_TRUE(isSchizophrenia("Пятница", 400));
 
-TEST(ChekNumberTest, Saturday) {
     EXPECT_TRUE(isSchizophrenia("Суббота", 56));
-    EXPECT_FALSE(isSchizophrenia("Суббота", 55));
-}
+    EXPECT_FALSE(isSchizophrenia("Суббота", 1));
 
-TEST(ChekNumberTest, Sunday) {
     EXPECT_TRUE(isSchizophrenia("Воскресенье", 666));
-    EXPECT_TRUE(isSchizophrenia("Воскресенье", -666));
-    EXPECT_FALSE(isSchizophrenia("Воскресенье", 0));
-}
+    EXPECT_TRUE(isSchizophrenia("Воскресенье", 5));
+    EXPECT_FALSE(isSchizophrenia("Воскресенье", 13));
 
-TEST(ChekNumberTest, InvalidDay) {
     EXPECT_FALSE(isSchizophrenia("NotADay", 0));
 }
 

@@ -11,7 +11,7 @@ int main() {
     std::cin >> d;
 
     
-    std::cout << "Enter number ";
+    std::cout << "Enter number";
     if (!(std::cin >> n)) {
         std::cerr << "Schizophrenia!" << std::endl;
         return 1;

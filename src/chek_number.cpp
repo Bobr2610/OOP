@@ -20,7 +20,13 @@ bool isSchizophrenia(const std::string& d, int n) {
         return n == 56;
     }
     if (d == "Воскресенье") {
-        return n == 666 || n == -666;
+        bool t = false;
+        if (n == 666) {
+            if (n == -666){
+            t = true;
+            }
+        }
+        return t;
     }
     return false;
 }
