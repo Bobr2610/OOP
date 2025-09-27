@@ -1,32 +1,26 @@
 #include "chek_number.h"
+#include <string>
+#include <vector>
+#include <cmath>
 
-bool isSchizophrenia(const std::string& d, int n) {
-    if (d == "Понедельник") {
-        return n == 12;
-    }
-    if (d == "Вторник") {
-        return n > 95;
-    }
-    if (d == "Среда") {
-        return n == 34;
-    }
-    if (d == "Четверг") {
-        return n == 0;
-    }
-    if (d == "Пятница") {
-        return n % 2 == 0;
-    }
-    if (d == "Суббота") {
-        return n == 56;
-    }
-    if (d == "Воскресенье") {
-        bool t = false;
-        if (n == 666) {
-            if (n == -666){
-            t = true;
-            }
+int eliminate_unset_bits(const std::string& n) {
+    std::string new_bit;
+    for (char i : n) {
+        if (i == '1') {
+            new_bit += i;
         }
-        return t;
     }
-    return false;
+    int new_10;
+    if (new_bit.empty()) {
+        new_10 = 0;
+        return new_10;
+    }
+
+    new_10 = 0;
+    int s = 0;
+    for (char i : new_bit) {
+        new_10 += std::pow(2, s);
+        s++;
+    }
+    return new_10;
 }

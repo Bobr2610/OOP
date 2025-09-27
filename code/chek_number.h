@@ -3,6 +3,6 @@
 
 #include <string>
 
-bool isSchizophrenia(const std::string& d, int n);
+int eliminate_unset_bits(const std::string& n);
 
 #endif

@@ -4,24 +4,10 @@
 #include "chek_number.h"
 
 int main() {
-    std::string d;
-    int n;
-
-    std::cout << "Enter day ";
-    std::cin >> d;
-
-    
-    std::cout << "Enter number";
-    if (!(std::cin >> n)) {
-        std::cerr << "Schizophrenia!" << std::endl;
-        return 1;
-    }
-// Да она так и пишется
-    bool s = isSchizophrenia(d, n);
-        if (s) {
-        std::cout << "Yes You are Psyho " << n << " on " << d << std::endl;
-    } else {
-        std::cout << "No You are`t Psyho " << n << " on " << d << std::endl;
-    }
+    std::string n;
+    std::cout << "Enter number: ";
+    std::cin >> n;
+    int answ = eliminate_unset_bits(n);
+    std::cout << answ << std::endl;
     return 0;
 }
